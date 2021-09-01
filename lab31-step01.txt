@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PROJECTS } from '../shared/mock-projects';
 import { Project } from '../shared/project.model';
 import { ProjectService } from '../shared/project.service';
 import { Subject, Observable, Subscription } from 'rxjs';

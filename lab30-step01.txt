@@ -7,7 +7,7 @@
     return this.http.get<Project[]>(url).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error(error);
-        return throwError('An error occured +searching the projects.');
+        return throwError('An error occured searching the projects.');
       })
     );
   }
