@@ -12,6 +12,6 @@ class ProjectListStubComponent {
 
 export class ProjectServiceStub {
   listByName(): Observable<Project[]> {
-    return of(PROJECTS);
+    return of(MOCK_PROJECTS);
   }
 }

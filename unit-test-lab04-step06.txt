@@ -9,12 +9,12 @@ import {
   NO_ERRORS_SCHEMA
 } from '@angular/core';
 import { Project } from '../shared/project.model';
-import { PROJECTS } from '../shared/mock-projects';
+import { MOCK_PROJECTS } from '../shared/mock-projects';
 
 @Component({ selector: 'app-project-card', template: '{{project | json}}' })
 class ProjectCardStubComponent {
   @Input()
-  project: Project;
+  project: Project | null = null;
   @Output()
   edit = new EventEmitter<any>();
 }
@@ -33,7 +33,7 @@ describe('ProjectListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProjectListComponent);
     component = fixture.componentInstance;
-    component.projects = PROJECTS;
+    component.projects = MOCK_PROJECTS;
 
     fixture.detectChanges();
   });
