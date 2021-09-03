@@ -2,7 +2,9 @@
     const notFoundErrorResponse = { status: 404, statusText: 'Not Found' };
     const content = 'The requested URL was not found on the server.';
     service.list().subscribe(
-      data => {},
+      (data) => {
+        fail('expected an error');
+      },
       error => {
         expect(error).toEqual('An error occurred loading the projects.');
       }

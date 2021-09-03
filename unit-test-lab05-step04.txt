@@ -1,7 +1,10 @@
+import { MOCK_PROJECTS } from './mock-projects';
+
+
   it('should list projects', () => {
-    service.list().subscribe(data => expect(data).toEqual(PROJECTS));
+    service.list().subscribe(data => expect(data).toEqual(MOCK_PROJECTS));
     const request = httpTestingController.expectOne(projectsUrl);
-    request.flush(PROJECTS);
+    request.flush(MOCK_PROJECTS);
   });
 
   afterEach(() => {
